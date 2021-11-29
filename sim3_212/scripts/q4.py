@@ -68,7 +68,7 @@ def roda_todo_frame(imagem):
         print('ex', e)
     
 if __name__=="__main__":
-    rospy.init_node("Q3")
+    rospy.init_node("Q4")
 
     topico_imagem = "/camera/image/compressed"
 
