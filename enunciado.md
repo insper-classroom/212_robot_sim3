@@ -99,46 +99,47 @@ Você vai notar que este programa roda o vídeo `lasercannon.mp4`. Baixe o víde
 
 Casos intermediários ou omissos da rubrica serão decididos pelo professor.
 
-## Questão 2  (3.33 pontos)
+## Questão 2 (3.3 pontos)
 
-Você faz parte do projeto de uma plataforma digital para assistência a treinamento de cães, que tem o objetivo de fazer o pet se movimentar. Seu papel é fazer a parte da visão computacional que irá identificar se o cão está de fato fazeendo o exercício pretendido e medir o seu aproveitamento.
+Você vai começar a fazer um programa capaz de dizer qual carta de um baralho está sendo apresentada.
 
-Para tanto, seu programa deverá:
+![](./q2/cartas.gif)
 
-1. Medir a distância total percorrida pelo cão ao longo de todos os frames da imagem. Essa distância total deve aparecer escrita na imagem de saída E também no terminal, para todo frame
-1. Identificar se o cachorro se aproximou ou se afastou da bola entre dois frames consecutivos. No caso do cão se afastar da bola, uma mensagem adicional deve aperecer na imagem E no terminal: `REX, CORRE!`
-1. Caso a menor distância entre o retângulo envolvente do cachorro e da bola for menor do que 20 pixels, uma outra mensagem deve aparecer na imagem E no terminal: `PEGOU!`  
+Seu objetivo é apontar o valor (ex.: "6")  e o naipe da carta appresentada a cada frame (ex.: Ouros)
+
 
 #### Orientações
 
-Trabalhe no arquivo `q2/q2.py`. Este exercício **não precisa** de ROS. Portanto pode ser feito até em Mac ou Windows
+A análise precisa levar em conta a imagem. Não pode levar em conta somente os tempos.
 
-Você vai notar que este programa roda o vídeo `dogtraining.mp4`. Baixe o vídeo [neste endereço](https://drive.google.com/file/d/10v0lrUtciTE7HNeO2WSE4ug9HafpQvHP/view?usp=sharing), dentro da pasta `q1/`.
+Você vai precisar do arquivo `cartas.mp4` para resolver a questão.
+
+Todas as cartas com naipes vermelhos são de ouros
+
+Todas as cartas com naipes pretos são de paus
+
+Baixe os arquivos de vídeo [neste link](https://github.com/Insper/robot20/raw/master/media/cartas.mp4)
+
 
 
 #### O que você deve fazer:
 
+Seu programa deve analisar a imagem e produzir uma saída indicando qual o naipe e qual o número. Ex.: `5 DE PAUS`, `6 DE OUROS` , etc. Seu programa só precisa funcionar para este vídeo específico, não será testado com outros vídeos em que apareçam cartas em outras posições.
+
+O apontamento não precisa ser feito na tela, pode ser feito no terminal.
 
 |Resultado| Conceito| 
 |---|---|
-| Não executa | zero |
-| Identifica o cachorro OU a bola, marcando claramente na imagem| 0.6|
-| Identifica o cachorro E a bola, marcando claramente na imagem| 1.5|
-| Identifica o cachorro E mede a distância percorrida| 1.5|
-| Identifica o cachorro e a bola e mede a distância percorrida| 2.4 |
-| Faz tudo o que se pede no enunciado, mas não está perfeito | 2.8 |
-| Resultados perfeitos | 3.33|
-
+| Não executa | 0 |
+| Faz separação por cores dos marcadores de naipes  | 1.0 |
+| Procura separar cada uma das regiões de paus ou ouros para contar quantas são, mas não acerta  | 2.3 |
+| Funciona perfeitamente | 3.33 | 
 
 Casos intermediários ou omissos da rubrica serão decididos pelo professor.
 
-*Exemplo do que deve ser feito*
+[Fonte dos arquivos](https://commons.wikimedia.org/wiki/File:Anglo-American_card_suits.svg)
 
-Exemplo de imagem de entrada
-![](cao_exemplo.png)
 
-Exemplo de imagem de saida
-![](cao_exemplo_detecta.png)
 
 ## Questões de ROS
 
