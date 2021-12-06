@@ -18,7 +18,6 @@ from cv_bridge import CvBridge, CvBridgeError
 #import mobilenet_simples as mnet
 
 
-
 def processa(frame):
     '''Use esta funcao para basear o processamento do seu robo'''
 
